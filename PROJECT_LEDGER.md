@@ -54,6 +54,23 @@ To build an autonomous, "deeply human" GTM Co-Pilot for indie founders that auto
 
 ---
 
+## 🚀 Deployment & Production
+### Docker Orchestration
+- **Build All:** `docker-compose build`
+- **Run All:** `docker-compose up -d`
+- **Frontend Port (Prod):** 3005
+- **Backend Port (Prod):** 8001
+
+### Production Checklist
+- [x] Standalone build configured in `next.config.ts`.
+- [x] Dockerfiles for FE and BE.
+- [x] Requirements.txt for BE.
+- [ ] SSL/HTTPS configuration (Nginx/Traefik).
+- [ ] API Key rotation & Secret management.
+- [ ] Database persistence (Phase 4).
+
+---
+
 ## 💡 Notes for Maintenance
 - The frontend is forced to port **3005** to avoid conflicts with Opus Pro.
 - The backend uses port **8001** for the same reason.

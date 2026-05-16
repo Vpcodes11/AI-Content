@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  vantage-backend:
+    build:
+      context: ./server
+    ports:
+      - "8001:8001"
+    env_file:
+      - ./server/.env
+    restart: always
+
+  vantage-frontend:
+    build:
+      context: .
+    ports:
+      - "3005:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8001
+    depends_on:
+      - vantage-backend
+    restart: always

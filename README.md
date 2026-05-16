@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vantage: AI GTM Co-Pilot for Indie Founders
 
-## Getting Started
+Vantage is a premium, autonomous growth operating system designed to market your products across social platforms while maintaining your authentic founder voice.
 
-First, run the development server:
+## 🚀 Features
+- **Product Brain:** Multi-source ingestion (Website, Social, GitHub, or Raw Idea).
+- **Humanization Engine:** Content generation that avoids "AI-isms" and prioritizes platform-native culture.
+- **Cinematic Dashboard:** A high-end command center for monitoring reach, engagement, and human scores.
+- **Autonomous Scheduler:** Smart background agents that manage your posting timeline independently.
 
+## 🛠️ Tech Stack
+- **Frontend:** Next.js 15+, CSS Modules, Glassmorphism design system.
+- **Backend:** FastAPI, BeautifulSoup4, Groq (Llama 3.3).
+- **Intelligence:** Behavioral AI for emotional intelligence and platform-specific tone.
+
+## 📦 Getting Started
+
+### 1. Backend Setup
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd server
+python -m venv venv
+# Activate venv (Windows: .\venv\Scripts\activate, Unix: source venv/bin/activate)
+pip install -r requirements.txt
+python main.py
+```
+*Note: Ensure you have a `.env` file in the `server` directory with your `GROQ_API_KEY`.*
+
+### 2. Frontend Setup
+```bash
+npm install
+npm run dev -- -p 3005
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📖 Project Ledger
+For detailed mission objectives, build history, and technical architecture, refer to the [PROJECT_LEDGER.md](./PROJECT_LEDGER.md).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛡️ License
+Proprietary. Built with 🖤 for solo founders.

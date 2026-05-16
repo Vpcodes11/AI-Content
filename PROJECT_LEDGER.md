@@ -2,6 +2,7 @@
 
 **Current Status:** Phase 2 (Active AI Intelligence)
 **Repository:** [https://github.com/Vpcodes11/AI-Content.git](https://github.com/Vpcodes11/AI-Content.git)
+**Workflow:** Branch `dev` (Active Development) -> `main` (Production)
 **Local Port (FE):** [http://localhost:3005](http://localhost:3005)
 **Local Port (BE):** [http://localhost:8001](http://localhost:8001)
 

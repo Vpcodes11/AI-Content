@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function DashboardPage() {
@@ -49,18 +50,21 @@ export default function DashboardPage() {
 
         <nav className={styles.navSection}>
           <div className={styles.navTitle}>Marketing</div>
-          <div 
+          <Link href="/dashboard"
             className={`${styles.navItem} ${view === 'dashboard' ? styles.navItemActive : ''}`}
             onClick={() => setView('dashboard')}
           >
             <span>📊</span> Dashboard
-          </div>
+          </Link>
           <div 
             className={`${styles.navItem} ${view === 'schedule' ? styles.navItemActive : ''}`}
             onClick={() => setView('schedule')}
           >
             <span>📅</span> Schedule
           </div>
+          <Link href="/connections" className={styles.navItem}>
+            <span>🔗</span> Connections
+          </Link>
         </nav>
 
         <nav className={styles.navSection}>

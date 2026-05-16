@@ -1,18 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./page.module.css";
 
 export default function ConnectionsPage() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [connections, setConnections] = useState({
     x: false,
     reddit: false,
     linkedin: false,
-    github: true // Mocked for ingestion demo
+    github: true 
   });
 
+  // Handle OAuth callback simulation
+  useEffect(() => {
+    const status = searchParams.get("auth");
+    const platform = searchParams.get("platform");
+    if (status === "success" && platform === "x") {
+      setConnections(prev => ({ ...prev, x: true }));
+      // Clean up URL
+      router.replace("/connections");
+    }
+  }, [searchParams, router]);
+
   const toggleConnection = (platform: keyof typeof connections) => {
+    if (platform === 'x' && !connections.x) {
+      // Redirect to the mock login page
+      router.push("/auth/x");
+      return;
+    }
     setConnections(prev => ({ ...prev, [platform]: !prev[platform] }));
   };
 

@@ -1,0 +1,80 @@
+.authContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.authCard {
+  background: #000;
+  border: 1px solid #333;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.xLogo {
+  font-size: 3rem;
+  margin-bottom: 24px;
+}
+
+.authCard h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.permissions {
+  color: #71767b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.permissions ul {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.authorizeBtn {
+  background-color: #1d9bf0;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.authorizeBtn:hover {
+  background-color: #1a8cd8;
+}
+
+.cancelBtn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #536471;
+  padding: 12px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 32px;
+  font-size: 0.8rem;
+  color: #71767b;
+  text-align: center;
+}
